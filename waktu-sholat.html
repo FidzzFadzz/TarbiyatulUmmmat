@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waktu Sholat - Aplikasi Islami</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100 min-h-screen overflow-x-hidden overflow-y-hidden">
+    <div class="max-w-md mx-auto">
+        
+        <!-- Header Section -->
+        <div class="px-6 pt-10 pb-32 header-with-overlay">
+            <!-- Lokasi -->
+            <div class="text-center text-white text-xs mb-4">
+                <p class="font-medium">Makassar, Sulawesi Selatan</p>
+            </div>
+            
+            <!-- Jam Digital Besar -->
+            <div class="text-center mb-3">
+                <div class="text-5xl font-bold text-white tracking-tight" id="currentTime">10:44</div>
+            </div>
+            
+            <!-- Countdown Text -->
+            <div class="text-center text-white text-xs mb-5">
+                <p id="countdownText" class="font-light">1 jam 21 menit lagi menuju waktu Dzuhur</p>
+            </div>
+            
+            <!-- Tombol Kalendar -->
+            <div class="flex justify-center">
+                <button class="bg-white bg-opacity-20 backdrop-blur-sm px-6 py-2 rounded-full flex items-center gap-2 text-white text-xs font-medium transition-all active:scale-95 hover:bg-opacity-30">
+                    <i class="far fa-calendar text-sm"></i>
+                    <span>Kalendar</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Body Section -->
+        <div class="bg-white rounded-t-3xl -mt-24 pt-5 px-5 pb-20 relative z-10 h-screen">
+            
+            <!-- Date Navigator -->
+            <div class="mb-5">
+                <div class="bg-gray-200 rounded-2xl px-3 py-3 flex items-center justify-between shadow-sm">
+                    <button class="text-gray-600 transition-all active:scale-95 hover:text-gray-800 w-8 h-8 flex items-center justify-center">
+                        <i class="fas fa-chevron-left text-sm"></i>
+                    </button>
+                    
+                    <div class="text-center flex-1 px-2">
+                        <p class="text-black font-semibold text-base mb-0.5">Senin, 16 Maret 2026</p>
+                        <p class="text-gray-500 text-sm">27 Ramadhan 1447H</p>
+                    </div>
+                    
+                    <button class="text-gray-600 transition-all active:scale-95 hover:text-gray-800 w-8 h-8 flex items-center justify-center">
+                        <i class="fas fa-chevron-right text-sm"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- List Waktu Sholat -->
+            <div class="space-y-0.5">
+                <!-- Subuh -->
+                <div class="flex items-center justify-between py-3 px-2 rounded-xl transition-all hover:bg-gray-50">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <img src="asset/subuh.png" alt="Subuh" class="w-6 h-6 object-contain" style="filter: brightness(0) saturate(100%) invert(32%) sepia(12%) saturate(1015%) hue-rotate(130deg) brightness(95%) contrast(88%);">
+                        </div>
+                        <span class="text-gray-800 font-medium text-sm">Subuh</span>
+                    </div>
+                    <span class="text-gray-800 font-semibold text-base">04:53</span>
+                </div>
+                
+                <!-- Terbit (Syuruq) -->
+                <div class="flex items-center justify-between py-3 px-2 rounded-xl transition-all hover:bg-gray-50">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <i class="fas fa-sun text-lg" style="color: #405957;"></i>
+                        </div>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-gray-500 font-medium text-sm">Terbit</span>
+                            <span class="text-gray-400 text-xs">(Syuruq)</span>
+                        </div>
+                    </div>
+                    <span class="text-gray-500 font-semibold text-base">06:22</span>
+                </div>
+                
+                <!-- Dzuhur -->
+                <div class="flex items-center justify-between py-3 px-2 rounded-xl transition-all hover:bg-gray-50">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <i class="fas fa-sun text-lg" style="color: #405957;"></i>
+                        </div>
+                        <span class="text-gray-800 font-medium text-sm">Dzuhur</span>
+                    </div>
+                    <span class="text-gray-800 font-semibold text-base">12:14</span>
+                </div>
+                
+                <!-- Ashar -->
+                <div class="flex items-center justify-between py-3 px-2 rounded-xl transition-all hover:bg-gray-50">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <i class="fas fa-cloud-sun text-lg" style="color: #405957;"></i>
+                        </div>
+                        <span class="text-gray-800 font-medium text-sm">Ashar</span>
+                    </div>
+                    <span class="text-gray-800 font-semibold text-base">15:21</span>
+                </div>
+                
+                <!-- Magrib -->
+                <div class="flex items-center justify-between py-3 px-2 rounded-xl transition-all hover:bg-gray-50">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <img src="asset/magrib.png" alt="Magrib" class="w-6 h-6 object-contain" style="filter: brightness(0) saturate(100%) invert(32%) sepia(12%) saturate(1015%) hue-rotate(130deg) brightness(95%) contrast(88%);">
+                        </div>
+                        <span class="text-gray-800 font-medium text-sm">Magrib</span>
+                    </div>
+                    <span class="text-gray-800 font-semibold text-base">18:17</span>
+                </div>
+                
+                <!-- Isya -->
+                <div class="flex items-center justify-between py-3 px-2 rounded-xl transition-all hover:bg-gray-50">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <i class="fas fa-moon text-lg" style="color: #405957;"></i>
+                        </div>
+                        <span class="text-gray-800 font-medium text-sm">Isya</span>
+                    </div>
+                    <span class="text-gray-800 font-semibold text-base">19:26</span>
+                </div>
+            </div>
+            
+        </div>
+        <!-- End Body Section -->
+        
+    </div>
+    
+    <!-- Bottom Navigation Bar -->
+    <div class="fixed bottom-0 left-0 right-0 shadow-2xl z-50" style="background-color: #405957;">
+        <div class="max-w-md mx-auto rounded-t-3xl" style="background-color: #405957;">
+            <div class="flex justify-around items-center py-4 px-6">
+                <a href="index.html" class="flex flex-col items-center gap-1 transition-all active:scale-95">
+                    <img src="asset/home.png" alt="Home" class="w-7 h-7 object-contain" style="filter: brightness(0) saturate(100%) invert(100%);">
+                </a>
+                <button class="flex flex-col items-center gap-1 transition-all active:scale-95">
+                    <img src="asset/Qubah.png" alt="Waktu Sholat" class="w-8 h-8 object-contain" style="filter: brightness(0) saturate(100%) invert(84%) sepia(14%) saturate(1015%) hue-rotate(327deg) brightness(98%) contrast(92%);">
+                </button>
+                <a href="artikel.html" class="flex flex-col items-center gap-1 transition-all active:scale-95">
+                    <img src="asset/article.png" alt="Article" class="w-7 h-7 object-contain" style="filter: brightness(0) saturate(100%) invert(100%);">
+                </a>
+                <a href="lainnya.html" class="flex flex-col items-center gap-1 transition-all active:scale-95">
+                    <img src="asset/lainnya.png" alt="Lainnya" class="w-7 h-7 object-contain" style="filter: brightness(0) saturate(100%) invert(100%);">
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/waktu-sholat.js"></script>
+</body>
+</html>
