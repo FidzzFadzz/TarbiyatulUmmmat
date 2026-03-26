@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Islami</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white min-h-screen overflow-x-hidden">
+    <div class="max-w-md mx-auto">
+        
+        <!-- Header Section -->
+        <div class="px-6 pt-6 pb-10 rounded-b-3xl header-with-overlay">
+            <!-- Tanggal -->
+            <div class="flex justify-between text-white text-xs mb-8">
+                <span>Senin 14 Maret 2025</span>
+                <span>27 Ramadhan 1445H</span>
+            </div>
+            
+            <!-- Jam Digital Besar -->
+            <div class="text-center mb-3">
+                <div class="text-7xl font-bold text-white tracking-tight" id="currentTime">10:44</div>
+            </div>
+            
+            <!-- Countdown Text -->
+            <div class="text-center text-white text-sm mb-10">
+                <p id="countdownText">1 jam 23 menit lagi menuju waktu Dzuhur</p>
+            </div>
+            
+            <!-- 5 Waktu Sholat -->
+            <div class="flex justify-around items-center">
+                <!-- Subuh -->
+                <div class="flex flex-col items-center gap-1">
+                    <img src="asset/subuh.png" alt="Subuh" class="w-6 h-6 object-contain" style="filter: brightness(0) saturate(100%) invert(84%) sepia(14%) saturate(1015%) hue-rotate(327deg) brightness(98%) contrast(92%);">
+                    <span class="text-white text-xs font-medium">Subuh</span>
+                    <span class="text-white text-xs">04:53</span>
+                </div>
+                
+                <!-- Dzuhur -->
+                <div class="flex flex-col items-center gap-1">
+                    <i class="fas fa-sun text-xl" style="color: #F2C6A0;"></i>
+                    <span class="text-white text-xs font-medium">Dzuhur</span>
+                    <span class="text-white text-xs">12:14</span>
+                </div>
+                
+                <!-- Ashar -->
+                <div class="flex flex-col items-center gap-1">
+                    <i class="fas fa-cloud-sun text-xl" style="color: #F2C6A0;"></i>
+                    <span class="text-white text-xs font-medium">Ashar</span>
+                    <span class="text-white text-xs">15:21</span>
+                </div>
+                
+                <!-- Magrib -->
+                <div class="flex flex-col items-center gap-1">
+                    <img src="asset/magrib.png" alt="Magrib" class="w-6 h-6 object-contain" style="filter: brightness(0) saturate(100%) invert(84%) sepia(14%) saturate(1015%) hue-rotate(327deg) brightness(98%) contrast(92%);">
+                    <span class="text-white text-xs font-medium">Magrib</span>
+                    <span class="text-white text-xs">18:37</span>
+                </div>
+                
+                <!-- Isya -->
+                <div class="flex flex-col items-center gap-1">
+                    <i class="fas fa-moon text-xl" style="color: #F2C6A0;"></i>
+                    <span class="text-white text-xs font-medium">Isya</span>
+                    <span class="text-white text-xs">19:26</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Body Section (Putih dengan Radius Atas) -->
+        <div class="bg-white rounded-t-3xl -mt-6 pt-8 px-5 pb-14 relative z-10">
+            
+            <!-- Grid Menu Utama -->
+            <div class="mb-8">
+                <div class="grid grid-cols-4 gap-4">
+                    <!-- Dzikir & Doa -->
+                    <div class="flex flex-col items-center gap-2">
+                        <button class="w-16 h-16 rounded-full flex items-center justify-center shadow-md transition-all active:scale-95" style="background-color: #F2F2F2;">
+                            <img src="asset/pray.png" alt="Dzikir & Doa" class="w-8 h-8 object-contain">
+                        </button>
+                        <span class="text-xs text-black text-center leading-tight">Dzikir & Doa</span>
+                    </div>
+                    
+                    <!-- Al-Qur'an -->
+                    <div class="flex flex-col items-center gap-2">
+                        <button class="w-16 h-16 rounded-full flex items-center justify-center shadow-md transition-all active:scale-95" style="background-color: #F2F2F2;">
+                            <img src="asset/koran.png" alt="Al-Qur'an" class="w-8 h-8 object-contain">
+                        </button>
+                        <span class="text-xs text-black text-center leading-tight">Al-Qur'an</span>
+                    </div>
+                    
+                    <!-- Sirah -->
+                    <div class="flex flex-col items-center gap-2">
+                        <button class="w-16 h-16 rounded-full flex items-center justify-center shadow-md transition-all active:scale-95" style="background-color: #F2F2F2;">
+                            <img src="asset/Sirah.png" alt="Sirah" class="w-8 h-8 object-contain">
+                        </button>
+                        <span class="text-xs text-black text-center leading-tight">Sirah</span>
+                    </div>
+                    
+                    <!-- Bahasa Arab -->
+                    <div class="flex flex-col items-center gap-2">
+                        <button class="w-16 h-16 rounded-full flex items-center justify-center shadow-md transition-all active:scale-95" style="background-color: #F2F2F2;">
+                            <span class="text-3xl font-bold" style="color: #405957;">ض</span>
+                        </button>
+                        <span class="text-xs text-black text-center leading-tight">Bahasa Arab</span>
+                    </div>
+                    
+                    <!-- Aqidah -->
+                    <div class="flex flex-col items-center gap-2">
+                        <button class="w-16 h-16 rounded-full flex items-center justify-center shadow-md transition-all active:scale-95" style="background-color: #F2F2F2;">
+                            <img src="asset/Aqidah.png" alt="Aqidah" class="w-8 h-8 object-contain">
+                        </button>
+                        <span class="text-xs text-black text-center leading-tight">Aqidah</span>
+                    </div>
+                    
+                    <!-- Fiqh -->
+                    <div class="flex flex-col items-center gap-2">
+                        <button class="w-16 h-16 rounded-full flex items-center justify-center shadow-md transition-all active:scale-95" style="background-color: #F2F2F2;">
+                            <i class="fas fa-book text-xl" style="color: #405957;"></i>
+                        </button>
+                        <span class="text-xs text-black text-center leading-tight">Fiqh</span>
+                    </div>
+                    
+                    <!-- Penuntut Ilmu -->
+                    <div class="flex flex-col items-center gap-2">
+                        <button class="w-16 h-16 rounded-full flex items-center justify-center shadow-md transition-all active:scale-95" style="background-color: #F2F2F2;">
+                            <img src="asset/Penuntut Ilmu.png" alt="Penuntut Ilmu" class="w-8 h-8 object-contain">
+                        </button>
+                        <span class="text-xs text-black text-center leading-tight">Penuntut Ilmu</span>
+                    </div>
+                    
+                    <!-- Bertanya -->
+                    <div class="flex flex-col items-center gap-2">
+                        <button class="w-16 h-16 rounded-full flex items-center justify-center shadow-md transition-all active:scale-95" style="background-color: #F2F2F2;">
+                            <i class="fas fa-question text-xl" style="color: #405957;"></i>
+                        </button>
+                        <span class="text-xs text-black text-center leading-tight">Bertanya</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section Kajian Online -->
+            <div class="mb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-bold text-black">Kajian Online</h2>
+                    <a href="#" class="text-sm font-medium transition" style="color: #405957;">Lihat Semuanya</a>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Video 1 -->
+                    <div>
+                        <div class="rounded-2xl h-24 mb-2 shadow-sm overflow-hidden">
+                            <img src="asset/thumbnail.png" alt="Kajian" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-sm text-black font-semibold leading-tight mb-1">Menjadi terbaik di sisi allah</p>
+                        <p class="text-xs" style="color: #A6A6A6;">Ustadz Dzulkifli Chaniago</p>
+                    </div>
+                    
+                    <!-- Video 2 -->
+                    <div>
+                        <div class="rounded-2xl h-24 mb-2 shadow-sm overflow-hidden">
+                            <img src="asset/thumbnail2.png" alt="Kajian" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-sm text-black font-semibold leading-tight mb-1">Amalan menambah ke</p>
+                        <p class="text-xs" style="color: #A6A6A6;">Ustadz Dzulkifli Chaniago</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section Saluran Live -->
+            <div class="mb-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-bold text-black">Saluran Live</h2>
+                    <a href="#" class="text-sm font-medium transition" style="color: #405957;">Lihat Semuanya</a>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Live 1 -->
+                    <div>
+                        <div class="rounded-2xl h-24 flex items-center justify-center shadow-sm" style="background-color: #A6A6A6;">
+                            <i class="fas fa-play-circle text-white text-4xl opacity-70"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Live 2 -->
+                    <div>
+                        <div class="rounded-2xl h-24 flex items-center justify-center shadow-sm" style="background-color: #A6A6A6;">
+                            <i class="fas fa-play-circle text-white text-4xl opacity-70"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- End Body Section -->
+        
+    </div>
+    
+    <!-- Bottom Navigation Bar -->
+    <div class="fixed bottom-0 left-0 right-0 shadow-2xl z-50" style="background-color: #405957;">
+        <div class="max-w-md mx-auto rounded-t-3xl" style="background-color: #405957;">
+            <div class="flex justify-around items-center py-4 px-6">
+                <button class="flex flex-col items-center gap-1 transition-all active:scale-95">
+                    <img src="asset/home.png" alt="Home" class="w-7 h-7 object-contain" style="filter: brightness(0) saturate(100%) invert(84%) sepia(14%) saturate(1015%) hue-rotate(327deg) brightness(98%) contrast(92%);">
+                </button>
+                <button class="flex flex-col items-center gap-1 transition-all active:scale-95">
+                    <img src="asset/Qubah.png" alt="Profile" class="w-8 h-8 object-contain" style="filter: brightness(0) saturate(100%) invert(100%);">
+                </button>
+                <button class="flex flex-col items-center gap-1 transition-all active:scale-95">
+                    <img src="asset/article.png" alt="Article" class="w-7 h-7 object-contain" style="filter: brightness(0) saturate(100%) invert(100%);">
+                </button>
+                <button class="flex flex-col items-center gap-1 transition-all active:scale-95">
+                    <img src="asset/lainnya.png" alt="Lainnya" class="w-7 h-7 object-contain" style="filter: brightness(0) saturate(100%) invert(100%);">
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
