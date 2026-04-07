@@ -56,3 +56,34 @@ button, a, div {
     width: 100%;
     max-width: 28rem;
 }
+
+/* Page Transition */
+@keyframes fadeScaleIn {
+    from { 
+        opacity: 0; 
+        transform: scale(0.97);
+    }
+    to { 
+        opacity: 1; 
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeScaleOut {
+    from { 
+        opacity: 0; 
+        transform: scale(1.03);
+    }
+    to { 
+        opacity: 1; 
+        transform: scale(1);
+    }
+}
+
+.slide-in-left {
+    animation: fadeScaleIn 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.slide-in-right {
+    animation: fadeScaleOut 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}

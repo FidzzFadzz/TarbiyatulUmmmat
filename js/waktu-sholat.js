@@ -34,8 +34,39 @@ function formatDate(date) {
     return `${dayName}, ${day} ${month} ${year}`;
 }
 
-// Konversi tanggal Masehi ke Hijriah (estimasi sederhana)
-function toHijri(date) {
+// Konversi tanggal Masehi ke Hijriah (menggunakan API)
+async function toHijri(date) {
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    
+    const hijriMonthsID = [
+        'Muharram', 'Safar', 'Rabiul Awal', 'Rabiul Akhir',
+        'Jumadil Awal', 'Jumadil Akhir', 'Rajab', 'Syaban',
+        'Ramadhan', 'Syawal', 'Dzulqadah', 'Dzulhijjah'
+    ];
+    
+    try {
+        const response = await fetch(
+            `https://api.aladhan.com/v1/gToH/${day}-${month}-${year}`
+        );
+        
+        if (!response.ok) throw new Error('Failed to fetch Hijri date');
+        
+        const data = await response.json();
+        const hijri = data.data.hijri;
+        // Gunakan nomor bulan (1-12) sebagai index array
+        const monthName = hijriMonthsID[parseInt(hijri.month.number) - 1] || hijri.month.en;
+        
+        return `${hijri.day} ${monthName} ${hijri.year}H`;
+    } catch (error) {
+        console.error('Error fetching Hijri date:', error);
+        return estimateHijri(date);
+    }
+}
+
+// Estimasi Hijriah sederhana sebagai fallback
+function estimateHijri(date) {
     // Menggunakan estimasi sederhana: 1 Muharram 1447 H = 7 Juli 2025
     const hijriEpoch = new Date(2025, 6, 7); // 7 Juli 2025
     const daysDiff = Math.floor((date - hijriEpoch) / (1000 * 60 * 60 * 24));
@@ -87,7 +118,7 @@ async function fetchPrayerTimes(date) {
 }
 
 // Update tampilan tanggal
-function updateDateDisplay() {
+async function updateDateDisplay() {
     const dateElement = document.querySelector('.text-center.flex-1 p:first-child');
     const hijriElement = document.querySelector('.text-center.flex-1 p:last-child');
     
@@ -96,7 +127,7 @@ function updateDateDisplay() {
     }
     
     if (hijriElement) {
-        hijriElement.textContent = toHijri(currentDate);
+        hijriElement.textContent = await toHijri(currentDate);
     }
 }
 

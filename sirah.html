@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sirah - Aplikasi Islami</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .category-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            height: 160px;
+            cursor: pointer;
+        }
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .category-card:hover img {
+            transform: scale(1.05);
+        }
+        .category-card .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(64,89,87,0.9) 0%, rgba(64,89,87,0.3) 60%, transparent 100%);
+        }
+        .category-card .content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen overflow-x-hidden">
+    <div class="max-w-md mx-auto">
+
+        <!-- Header -->
+        <div class="px-5 pt-8 pb-4 flex items-center justify-between" style="background-color: #405957;">
+            <a href="javascript:void(0)" onclick="navigateBack('index.html')" class="text-white transition active:scale-95">
+                <i class="fas fa-arrow-left text-lg"></i>
+            </a>
+            <h1 class="text-xl font-bold text-white">Sirah</h1>
+            <div class="w-6"></div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="px-5 py-4">
+            <div class="relative">
+                <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+                <input
+                    type="text"
+                    placeholder="Cari kategori..."
+                    class="w-full pl-10 pr-4 py-3 rounded-full bg-white border border-gray-200 focus:outline-none focus:border-gray-300 text-sm text-gray-700 placeholder-gray-400 shadow-sm"
+                >
+            </div>
+        </div>
+
+        <!-- Grid Kategori -->
+        <div class="px-5 pb-8 grid grid-cols-2 gap-4">
+
+            <!-- Kisah Para Nabi -->
+            <a href="sirah-sub.html?kategori=nabi" class="category-card shadow-md">
+                <img src="asset/Kisah Para Nabi.jfif" alt="Kisah Para Nabi">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h3 class="text-white font-bold text-sm">Kisah Para Nabi</h3>
+                    <p class="text-white text-xs opacity-80">25 Kisah Nabi</p>
+                </div>
+            </a>
+
+            <!-- Kisah Para Sahabat -->
+            <a href="sirah-sub.html?kategori=sahabat" class="category-card shadow-md">
+                <img src="asset/Para Sahabat.jfif" alt="Kisah Para Sahabat">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h3 class="text-white font-bold text-sm">Kisah Para Sahabat</h3>
+                    <p class="text-white text-xs opacity-80">Sahabat Rasulullah</p>
+                </div>
+            </a>
+
+            <!-- Kisah Orang Shaleh -->
+            <a href="sirah-sub.html?kategori=shaleh" class="category-card shadow-md">
+                <img src="asset/Kisah Orang Shaleh.jfif" alt="Kisah Orang Shaleh">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h3 class="text-white font-bold text-sm">Kisah Orang Shaleh</h3>
+                    <p class="text-white text-xs opacity-80">Teladan kehidupan</p>
+                </div>
+            </a>
+
+            <!-- Kisah Dalam Al-Qur'an -->
+            <a href="sirah-sub.html?kategori=quran" class="category-card shadow-md">
+                <img src="asset/Kisah Dalam Al-Qur'an.jfif" alt="Kisah Dalam Al-Qur'an">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h3 class="text-white font-bold text-sm">Kisah Dalam Al-Qur'an</h3>
+                    <p class="text-white text-xs opacity-80">Kisah penuh hikmah</p>
+                </div>
+            </a>
+
+            <!-- Sirah Nabawiyah -->
+            <a href="sirah-sub.html?kategori=nabawiyah" class="category-card shadow-md">
+                <img src="asset/Sirah Nabawiyah.jfif" alt="Sirah Nabawiyah">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h3 class="text-white font-bold text-sm">Sirah Nabawiyah</h3>
+                    <p class="text-white text-xs opacity-80">Perjalanan hidup Nabi</p>
+                </div>
+            </a>
+
+            <!-- Kisah Wanita Shalehah -->
+            <a href="sirah-sub.html?kategori=wanita" class="category-card shadow-md">
+                <img src="asset/Wanita Shalehah.jfif" alt="Kisah Wanita Shalehah">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h3 class="text-white font-bold text-sm">Kisah Wanita Shalehah</h3>
+                    <p class="text-white text-xs opacity-80">Teladan wanita mulia</p>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+    <script src="js/transition.js"></script>
+</body>
+</html>

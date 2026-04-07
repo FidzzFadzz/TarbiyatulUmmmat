@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -76,9 +76,9 @@
                 <div class="grid grid-cols-4 gap-4">
                     <!-- Dzikir & Doa -->
                     <div class="flex flex-col items-center gap-2">
-                        <button class="w-16 h-16 rounded-full flex items-center justify-center shadow-md transition-all active:scale-95" style="background-color: #F2F2F2;">
+                        <a href="javascript:void(0)" onclick="navigateTo('doa-dzikir.html')" class="w-16 h-16 rounded-full flex items-center justify-center shadow-md transition-all active:scale-95" style="background-color: #F2F2F2;">
                             <img src="asset/pray.png" alt="Dzikir & Doa" class="w-8 h-8 object-contain">
-                        </button>
+                        </a>
                         <span class="text-xs text-black text-center leading-tight">Dzikir & Doa</span>
                     </div>
                     
@@ -92,9 +92,9 @@
                     
                     <!-- Sirah -->
                     <div class="flex flex-col items-center gap-2">
-                        <button class="w-16 h-16 rounded-full flex items-center justify-center shadow-md transition-all active:scale-95" style="background-color: #F2F2F2;">
+                        <a href="javascript:void(0)" onclick="navigateTo('sirah.html')" class="w-16 h-16 rounded-full flex items-center justify-center shadow-md transition-all active:scale-95" style="background-color: #F2F2F2;">
                             <img src="asset/Sirah.png" alt="Sirah" class="w-8 h-8 object-contain">
-                        </button>
+                        </a>
                         <span class="text-xs text-black text-center leading-tight">Sirah</span>
                     </div>
                     
@@ -218,5 +218,6 @@
     </div>
     
     <script src="js/script.js"></script>
+    <script src="js/transition.js"></script>
 </body>
 </html>

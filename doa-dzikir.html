@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doa & Dzikir - Aplikasi Islami</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 min-h-screen overflow-x-hidden">
+    <div class="max-w-md mx-auto">
+
+        <!-- Header -->
+        <div class="px-5 pt-8 pb-4 flex items-center justify-between" style="background-color: #405957;">
+            <a href="javascript:void(0)" onclick="navigateBack('index.html')" class="text-white transition active:scale-95">
+                <i class="fas fa-arrow-left text-lg"></i>
+            </a>
+            <h1 class="text-xl font-bold text-white">Doa & Dzikir</h1>
+            <button class="text-white transition active:scale-95">
+                <i class="far fa-bookmark text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="px-5 py-4">
+            <div class="relative">
+                <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+                <input
+                    type="text"
+                    placeholder="Cari kategori..."
+                    class="w-full pl-10 pr-4 py-3 rounded-full bg-white border border-gray-200 focus:outline-none focus:border-gray-300 text-sm text-gray-700 placeholder-gray-400 shadow-sm"
+                >
+            </div>
+        </div>
+
+        <!-- Grid Kategori -->
+        <div class="px-5 pb-8 grid grid-cols-2 gap-4">
+
+            <!-- Doa Harian -->
+            <a href="#" class="bg-white rounded-2xl p-4 shadow-sm transition-all hover:shadow-md active:scale-95">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-3" style="background-color: #e8f0ef;">
+                    <i class="fas fa-sun text-xl" style="color: #405957;"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 text-sm mb-1">Doa Harian</h3>
+                <p class="text-xs text-gray-400 line-clamp-2">Kumpulan doa aktivitas...</p>
+            </a>
+
+            <!-- Wirid & Tahlil -->
+            <a href="#" class="bg-white rounded-2xl p-4 shadow-sm transition-all hover:shadow-md active:scale-95">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-3" style="background-color: #e8f0ef;">
+                    <i class="fas fa-book-open text-xl" style="color: #405957;"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 text-sm mb-1">Wirid & Tahlil</h3>
+                <p class="text-xs text-gray-400 line-clamp-2">Susunan dzikir setelah shal...</p>
+            </a>
+
+            <!-- Bilal & Tarawih -->
+            <a href="#" class="bg-white rounded-2xl p-4 shadow-sm transition-all hover:shadow-md active:scale-95">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-3" style="background-color: #e8f0ef;">
+                    <i class="fas fa-user-friends text-xl" style="color: #405957;"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 text-sm mb-1">Bilal & Tarawih</h3>
+                <p class="text-xs text-gray-400 line-clamp-2">Panduan bilal shalat tarawi...</p>
+            </a>
+
+            <!-- Sholawat -->
+            <a href="#" class="bg-white rounded-2xl p-4 shadow-sm transition-all hover:shadow-md active:scale-95">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-3" style="background-color: #e8f0ef;">
+                    <i class="fas fa-heart text-xl" style="color: #405957;"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 text-sm mb-1">Sholawat</h3>
+                <p class="text-xs text-gray-400 line-clamp-2">Kumpulan sholawat Nabi...</p>
+            </a>
+
+            <!-- Al-Ma'tsurat Pagi -->
+            <a href="#" class="bg-white rounded-2xl p-4 shadow-sm transition-all hover:shadow-md active:scale-95">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-3" style="background-color: #e8f0ef;">
+                    <i class="fas fa-cloud-sun text-xl" style="color: #405957;"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 text-sm mb-1">Al-Ma'tsurat Pagi</h3>
+                <p class="text-xs text-gray-400 line-clamp-2">Dzikir pagi hari</p>
+            </a>
+
+            <!-- Al-Ma'tsurat Petang -->
+            <a href="#" class="bg-white rounded-2xl p-4 shadow-sm transition-all hover:shadow-md active:scale-95">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-3" style="background-color: #e8f0ef;">
+                    <i class="fas fa-cloud-moon text-xl" style="color: #405957;"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 text-sm mb-1">Al-Ma'tsurat Petang</h3>
+                <p class="text-xs text-gray-400 line-clamp-2">Dzikir sore hari</p>
+            </a>
+
+            <!-- Asmaul Husna -->
+            <a href="#" class="bg-white rounded-2xl p-4 shadow-sm transition-all hover:shadow-md active:scale-95">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-3" style="background-color: #e8f0ef;">
+                    <i class="fas fa-star text-xl" style="color: #405957;"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 text-sm mb-1">Asmaul Husna</h3>
+                <p class="text-xs text-gray-400 line-clamp-2">99 Nama Allah beserta...</p>
+            </a>
+
+            <!-- Doa Pribadi Saya -->
+            <a href="#" class="bg-white rounded-2xl p-4 shadow-sm transition-all hover:shadow-md active:scale-95">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center mb-3" style="background-color: #405957;">
+                    <i class="fas fa-heart text-xl text-white"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 text-sm mb-1">Doa Pribadi Saya</h3>
+                <p class="text-xs text-gray-400 line-clamp-2">Kumpulan doa yang Anda...</p>
+            </a>
+
+        </div>
+
+    </div>
+</body>
+</html>
+    <script src="js/transition.js"></script>
+</body>
+</html>
